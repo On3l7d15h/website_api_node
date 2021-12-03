@@ -190,10 +190,12 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "start": "node .",
+    "start": "node App",
     "dev": "nodemon App"
   },
   "author": "On3l7d15h",
   "license": "ISC",
   "description": ""
 }
+
+
