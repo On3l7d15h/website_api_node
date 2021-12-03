@@ -1,0 +1,60 @@
+.example
+{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+    .example h1
+    {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 10px;
+        color: var(--c-white);
+    }
+
+    .example p
+    {
+        font-size: 16px;
+        color: var(--c-white);
+        margin: 0 0 15px;
+        width: 40%;
+        text-align: center;
+    }
+
+    .example code
+    {
+        width: 70%;
+        max-width: 70%;
+        height: 50vh;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        background: var(--c-blackGray);
+        color: var(--c-whitePurpleTrans2);
+    }
+
+        .example code p
+        {
+            margin: 5px 0;
+            font-size: 16px;
+            width: 100%;
+            color: var(--c-purple);
+        }
+
+        .example code span
+        {
+            color: var(--c-white);
+        }

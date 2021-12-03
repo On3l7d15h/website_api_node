@@ -1,0 +1,22 @@
+<%- include("templates/header", {title: "Datos Api"})%>
+
+<!-- other container, example part! -->
+<%- include("templates/nav")%>
+
+<div class="example">
+    <h1>Datos de la Api!</h1>
+    <br />
+    <p> Si desea ver el link para tener acceso a los datos de esta api!, haga click en contactApi, en la barra 
+        de navegación! </p>
+    <code>
+        <% contact.map(({ nombre, apellido, número }) => { %>
+            <p><span>{</span> 
+                <span>nombre:</span> <%= nombre%>, 
+                <span>apellido:</span> <%= apellido%>, 
+                <span>número:</span> <%= número%> 
+               <span>}</span></p>
+        <% }) %>
+    </code>
+</div>
+<script src="scripts/sweetalerts.js"></script>
+<%- include("templates/footer")%>
