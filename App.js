@@ -1,7 +1,6 @@
 //nuestras importaciones y variables
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 require("dotenv").config()
 
     const app = express();
@@ -13,8 +12,8 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 
 //usando configuraciones necesarias para el envío de datos con la Api!
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}));   
+app.use(express.json())
+app.use(express.urlencoded({extended: true}));   
 
 //otras variables;
 const user = process.env.DBUSER;
