@@ -28,10 +28,18 @@ mongoose.connect(`mongodb+srv://${user}:${pass}@cluster0.nlyfg.mongodb.net/${nam
     .then(() => console.log("Conectado!"))
     .catch(e => console.log(e))
 
-
 //llamando nuestro Primer get
 app.use("/", require("./routers/apiGet.js"));
 app.use("/", require("./routers/apiPost.js"));
+
+//código que no conocía pero que es muy importante!
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 
 //Mostrando en consola!
 app.listen(port, () => console.log(`Abriendo el servidor en el puerto ${port}`));
